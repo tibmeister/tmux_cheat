@@ -74,10 +74,10 @@ In tmux, hit the prefix `ctrl+b` (this is default, adjust as needed).  All comma
 | + | break pane into window (e.g. to select text by mouse to copy) |
 | - | restore pane from window |
 | ⍽ | space - toggle between layouts |
-| <prefix> q | (Show pane numbers, when the numbers show up type the key to goto that pane)
-| <prefix> { | (Move the current pane left) |
-| <prefix> } | (Move the current pane right) |
-| <prefix> z | toggle pane zoom     |
+| q | (Show pane numbers, when the numbers show up type the key to goto that pane) |
+| { | (Move the current pane left) |
+| } | (Move the current pane right) |
+| z | toggle pane zoom |
 
 ### Sync Panes 
 
@@ -165,10 +165,7 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
 ### Configurations Options:
 
     # Mouse support - set to on if you want to use the mouse
-    * setw -g mode-mouse off
-    * set -g mouse-select-pane off
-    * set -g mouse-resize-pane off
-    * set -g mouse-select-window off
+    * :setw -g mouse [on|off]
 
     # Set the default terminal mode to 256color mode
     set -g default-terminal "screen-256color"
@@ -179,11 +176,6 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
 
     # Center the window list
     set -g status-justify centre
-
-    # Maximize and restore a pane
-    unbind Up bind Up new-window -d -n tmp \; swap-pane -s tmp.1 \; select-window -t tmp
-    unbind Down
-    bind Down last-window \; swap-pane -s tmp.1 \; kill-window -t tmp
 
 # Resources:
 

@@ -10,7 +10,7 @@
     - [Copy mode:](#copy-mode)
     - [Misc](#misc)
     - [Commands/Misc](#commandsmisc)
-    - [Configurations Options:](#configurations-options)
+    - [Configurations Options (While in tmux)](#configurations-options-while-in-tmux)
 - [Resources:](#resources)
 # tmux shortcuts & cheatsheet
 
@@ -183,20 +183,21 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
 ### Commands/Misc
     PREFIX : join-pane -s 2 -t 1 (Joins two windows into one as seperate panes with -s being Source and -t being Target)
 
-### Configurations Options:
+### Configurations Options (While in tmux)
 
     # Mouse support - set to on if you want to use the mouse
-    * :setw -g mouse [on|off]
+    * :set -g mouse [on|off]
+    In Mouse Mode, use the ***SHIFT*** key to allow for normal select/copy with the mouse
 
     # Set the default terminal mode to 256color mode
     set -g default-terminal "screen-256color"
 
     # enable activity alerts
-    setw -g monitor-activity on
+    set -g monitor-activity on
     set -g visual-activity on
 
     # Center the window list
-    set -g status-justify centre
+    set -g status-justify center
 
 # Resources:
 

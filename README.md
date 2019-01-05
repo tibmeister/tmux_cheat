@@ -32,6 +32,8 @@ case $- in
     ;;
 esac
 ```
+The advantage of this block of code is that when you exit the tmux session, it will also exit you out of your bash session, saving some typing.
+
 ## Commandline
 start new:
 
